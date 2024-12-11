@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+  <html lang="eng-ca">
+    <head>
+      <meta charset="utc-8">
+      <title>Admissions | University of Waterloo</title>
+	  <!-- created by Andreea McKague on Wednesday, November 27th, 2024-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="icon" type="image/x-icon" href="uw-favicon.ico">
+	  <link rel="stylesheet" type="text/css" href="uwstyle.css">
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	  <style>
+		.section-background{
+		  top: 0;
+		  left: 0;
+		  margin: 0;
+		  padding: 0;
+		  background-size: 100%;
+		  background-repeat: no-repeat;
+		  width: 100vw;
+		  height: 100vh;
+		  position: relative;
+		}
+		#hero-background{
+		  background-image: url("admissions-stock-image.png");
+		}
+		.small-section{
+		  margin: 0;
+		  padding: 0;
+		  width: 100%;
+		  height: 67vh;
+		  overflow: hidden;
+		}
+		.header-col{
+          max-width: 40%;
+		  text-align: right;
+		}
+		.text-col{
+          max-width: 55%;
+		}
+		h2{
+		  margin: 0;
+		  padding: 0;
+		  font-family: "Raleway", sans-serif;
+		  font-size: 3.5em;
+		  font-weight: 800;
+		  color: #F4F2EC;
+		  letter-spacing: -0.03em;
+		}
+		h3{
+		  margin: 0;
+		  padding: 0;
+		  font-family: "Raleway", sans-serif;
+		  font-size: 1.8em;
+		  font-weight: 800;
+		  color: #F4F2EC;
+		  line-height: 1.05em;
+		  letter-spacing: -0.02em;
+		}
+		p, td, th{
+		  margin: 0;
+		  padding: 0;
+		  font-family: "Raleway", sans-serif;
+		  font-size: 1.2em;
+		  font-weight: 700;
+		  letter-spacing: 0.01em;
+		  line-height: 1.5em;
+		}
+		th{
+		  font-weight: 400;
+		  text-align: left;
+		}
+		#introduction-container{
+          padding-top: 33vh;
+		  display: flex;
+		  justify-content: space-between;
+		}
+		.admission-container{
+		  display: flex;
+		  width: 100%;
+		  height: 145vh;
+		  flex-direction: column;
+		  justify-content: center;
+		  align-items: center;
+		  overflow: hidden;
+		}
+		.admission-box{
+		  width: 27%;
+		  height: fit-content;
+		  padding: 1.2em 2em;
+		  border-radius: 1em;
+		  background-color: #F4F2EC;
+		  overflow: hidden;
+		}		
+		.admission-row{
+		  display: flex;
+		  flex-direction: row;
+		  align-items: flex-start;
+		  justify-content: space-between;		  
+		  margin-top: 2.5em;
+		}
+		.admission-links{
+		  margin: 0.5em 0;
+		  width: fit-content;
+		  color: #1E1B18;
+		  padding: 0.2em 0.7em;
+		  border-radius: 1em;
+		  background-color: #FFD74F;
+		  font-weight: 800;
+		}
+		.admission-links:last-child{
+		  margin-bottom: 1.8em;
+		}
+		.admission-links:last-child:hover{
+		  margin: 0.5em 0;
+		  width: fit-content;
+		  color: #1E1B18;
+		  padding: 0.2em 0.7em;
+		  border-radius: 1em;
+		  background-color: #EAAB00;
+		  margin-bottom: 1.8em;
+		}
+		.admission-links:hover{
+		  margin: 0.5em 0;
+		  width: fit-content;
+		  color: #1E1B18;
+		  padding: 0.2em 0.7em;
+		  border-radius: 1em;
+		  background-color: #EAAB00;
+		}
+		button{
+		  border: none;
+		}
+		.button-cta{
+		  margin-top: 2.2em;
+		  background-color: #FFD74F;
+		  border-radius: 6em;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  transition: all 0.3s ease;
+		}
+		.button-cta:hover{
+		  border: 0.4em solid #FFD74F;
+		  background-color: #1E1B18;
+		}
+		.button-text{
+		  color: #1E1B18;
+		  padding: 0.7em 1.5em;
+		}
+		.button-text:hover{
+		  color: #FFD74F;
+		  padding: 0.7em 1.5em;
+		}
+		.button2-cta{
+		  margin-top: 2.2em;
+		  background-color: #1E1B18;
+		  border-radius: 6em;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  transition: all 0.3s ease;
+		}
+		.button2-cta:hover{
+		  border: 0.4em solid #1E1B18;
+		  background-color: #FFD74F;
+		}
+		.button2-text{
+		  color: #FFD74F;
+		  padding: 0.7em 1.5em;
+		}
+		.button2-text:hover{
+		  color: #1E1B18;
+		  padding: 0.7em 1.5em;
+		}
+		.gradient-container{
+		  background-image: linear-gradient(to right, #F2EDA8, #EAAB00);
+		}
+		.numbers-title{
+		  margin-top: 0.8em;
+		  color: #1E1B18;
+		}
+		.column-items{
+		  display: flex;
+		  align-items: center;
+		  flex-direction: column;	
+		}
+		.numbers-row{
+	      width: 100%;
+		  display: flex;
+		  flex-direction: row;
+		  align-items: center;
+		  justify-content: space-between;
+		  margin-top: 5em;
+		  margin-bottom: 2em;
+		  text-align: center;
+		}
+		.emphasize{
+	      margin: 0;
+		  margin-top: 2.9em;
+		  padding: 0;
+		  font-family: "Archivo", sans-serif;
+		  font-size: 5em;
+		  font-weight: 700;
+		  color: #1E1B18;
+		  line-height: 0;
+		  letter-spacing: -0.04em;
+		  margin-bottom: 0.52em;
+		}
+		.number-container{
+		  display: flex;
+		  flex-direction: column;
+		  width: 30%;
+		}
+		.flexible-container{
+		  width: 100%;
+		  height: 100%;
+		  display: flex;
+		  flex-direction: column;
+		  padding: 3em 0em;
+		  align-items: center;
+		  justify-content: center;
+		  overflow: hidden;
+		}
+		.horizontal-container{
+		  display: flex;
+		  width: 95%;
+		  height: 45vh;
+		  background-color: #F4F2EC;
+		  justify-content: flex-start;
+		  align-items: center;
+		  border-radius: 1em;
+		  padding: 1em 2em;
+		  overflow: hidden;
+		  margin-top: 1.5em;
+		}
+		.hor-con-2{
+		  justify-content: space-between;
+		}
+		.first-container{
+		  margin-top: 2.8em;
+		}
+		.details{
+		  color: black;
+		  margin-top: 2em;
+		}
+		.information-container{
+		  height: 100%;
+		  display: flex;
+		  flex-direction: column; 
+		  justify-content: space-evenly;
+		  align-items: flex-start;
+		  max-width: 30em;
+		  margin-left: 2.5em;
+		  color: #1E1B18;
+		}
+		.info-con-2{
+		  margin-left: 1.5em;
+		}
+		.date{
+		  font-size: 11vh;
+		  margin-top: 0.45em;
+		  transform: rotate(90deg);
+		}
+		.contact-container{
+          margin-top: 3em;
+		}
+		.contact-text-container{
+		  width: 100%;
+		  display: flex;
+		  justify-content: space-between;
+		  margin-top: 1.2em;
+		  margin-bottom: 2em;
+		}
+		.contact-text{
+		  color: #1E1B18;
+		}
+		.pair{
+		  display: flex;
+		}
+		.pair .contact-text{
+		  padding-left: 4.5em;
+		}
+		td{
+		  padding: 1em 0em;
+		}
+		.footer-container{
+		  margin-top: 2em;
+		}
+		.admission-h3{
+		  color: #1E1B18;
+		  padding-top: 0.8em; 
+		  margin-bottom: 0.7em;
+		}
+		.by-the-numbers-row{
+		  width: 100%;
+		  height: 67vh;
+		  display: flex;
+		  flex-direction: row;
+		  justify-content: center;
+		  align-items: center;
+		}
+		.by-the-numbers-box{
+		  width: 25%;
+		  height: 100%;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		}
+		.box1{
+		  background-color: #F2EDA8;
+		}
+		.box2{
+		  background-color: #FAE100;
+		}
+		.box3{
+		  background-color: #FED34C;
+		}
+		.box4{
+		  background-color: #EAAB00;
+		}
+		.by-the-numbers-row p{
+		  color: #1E1B18;
+		  text-align: right;
+		}
+		.by-the-numbers-container{
+		  width: 100%;
+		  display: flex;
+		  padding: 0em 2.5em;
+		  flex-direction: column;
+		}
+		.top-container{
+		  width: 100%;
+		  display: flex;
+		}
+		.bottom-container{
+		  width: 100%;
+		  display: flex;
+		  flex-direction: column;
+		  align-items: flex-end;
+		  justify-content: flex-end;
+		}
+		
+      </style>
+    </head>
+    <body>
+	
+      <nav>
+		<div class="section-contents">
+		  <a href="home.html" id="nav-logo"><img src="uw-logo.png" alt="University of Waterloo Logo" width="150em" height="auto"></a>
+          <ul>        
+		    <li><a href="admissions.html">Admissions</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="https://uwaterloo.ca/faculties-academics" target="_blank">Academics</a></li>
+			<li><a href="https://uwaterloo.ca/alumni/" target="_blank">Alumni</a></li>
+			<li><a href="give.html">Give</a></li>
+			 <li><a href="https://uwaterloo.ca/search/" target="_blank"><img src="search-icon.png" alt="Search Icon" width="auto" height="15em"></a></li>
+		  </ul>
+		</div>
+      </nav>
+	  
+	  <section id="hero">
+	    <div class="section-background" id="hero-background"></div>
+		  <div class="section-contents">
+		    <img src="you-plus-waterloo.png" alt="You + Waterloo title" style="position: absolute; top: 24.5em;"  width="auto" height="250em">
+	      </div>
+		</div>
+	  </section>
+	  
+	  <section id="intro">
+	    <div class="small-section">
+		  <div class="section-contents" id="introduction-container">
+			
+		    <div class="text-col">
+		      <p>Our game-changing research and entrepreneurial
+			  spirit power one of the world’s top innovation hubs.
+			  Our students learn from world-class scholars and benefit 
+			  from North America’s largest paid co-op program.</p>
+	        </div>
+
+			
+            <div class="header-col">
+	          <h3>Discover Canada's<br>innovation university</h3>
+		    </div>
+			
+		  </div>
+		</div>
+	  </section>
+	
+	  <section id="admission-links">
+	    <div class="section-contents">
+          <div class="admission-container">
+		    <h2>Join Us at Waterloo</h2>
+			
+			<div class="admission-row">
+			  <div class="admission-box">
+				<img src="admission1.png" alt="University Students Image" width="100%" height="auto">
+				<h3 class="admission-h3">High School<br>& Transfer Students</h3>
+				<p class="important admission-links">Browse Undergraduate Programs</p>
+				<p class="important admission-links">Admission Requirements</p>
+				<p class="important admission-links">Financial Aid</p>
+				<p class="important admission-links">How to Apply</p>
+				<p class="important admission-links">What’s Co-Op?</p>
+			  </div>
+			  
+              <div class="admission-box">
+				<img src="admission2.png" alt="Student and Staff Image" width="100%" height="auto">
+				<h3 class="admission-h3">Future Graduate Students</h3>
+				<p class="important admission-links">Browse Graduate Programs</p>
+				<p class="important admission-links">Researching Guide</p>
+				<p class="important admission-links">Admission Requirements</p>
+				<p class="important admission-links">Funding</p>
+			  </div>
+			  
+			  <div class="admission-box">
+			    <img src="admission3.png" alt="University Student Studying on Computer" width="100%" height="auto">
+				<h3 class="admission-h3">Other Ways to Study</h3>
+				<p class="important admission-links">Part-Time & Online Studies</p>
+				<p class="important admission-links">Earn Your Graduate Degree Online</p>
+				<p class="important admission-links">Professional Development</p>
+				
+			  </div>
+			</div>
+		
+			<a href="https://uwaterloo.ca/future-students/programs"><button class="button-cta"><h3 class="button-text">Browse All</h3></button></a>
+		  </div>
+		</div>
+	  </section>
+	 
+	  <section id="by-the-numbers">
+	    <div class="small-section">
+		  <div class="column-items">
+		    
+			<div class="by-the-numbers-row">
+			
+		      <div class="by-the-numbers-box box1">
+				<div class="by-the-numbers-container">
+				
+				  <div class="top-container">
+			        <img src="icon1.png" alt="Brief case icon" width="auto" height="75em">
+		          </div>
+				  <div class="bottom-container">
+				    <p class="emphasize">96.6%</p>
+				    <p>1st work term<br>employment rate</p>
+				  </div>
+				  
+				</div>
+			  </div>
+			  
+			  <div class="by-the-numbers-box box2">
+			    <div class="by-the-numbers-container">
+				  
+				  <div class="top-container">
+			        <img src="icon2.png" alt="Graduation cap icon" width="auto" height="75em">
+		          </div>
+				  <div class="bottom-container">
+				    <p class="emphasize">84%</p>
+				    <p>graduation<br>rate</p>
+				  </div>
+				  
+				</div>
+			  </div>
+			  
+			  <div class="by-the-numbers-box box3">
+			    <div class="by-the-numbers-container">
+				
+				  <div class="top-container">
+				  <img src="icon3.png" alt="Person icon" width="auto" height="75em">
+		          </div>
+				  <div class="bottom-container">
+				    <p class="emphasize">253 000</p>
+				    <p>total University<br>of Waterloo alumni</p>
+				  </div>
+				  
+				</div>
+			  </div>
+			  
+			  <div class="by-the-numbers-box box4">
+			    <div class="by-the-numbers-container">
+				
+				  <div class="top-container">
+				    <img src="icon4.png" alt="Globe abstract icon" width="auto" height="75em">
+		          </div>
+				  <div class="bottom-container">
+				    <p class="emphasize">25th</p>
+				    <p>globally for innovation & entrepreneurship</p>
+				  </div>
+				  
+				</div>
+			  </div>
+			  
+		    </div>
+			
+		  </div>
+		</div>
+	  </section>
+    
+	  <section id="campuses">
+	    <div class="section-contents">
+		  <div class="flexible-container">
+		  
+		    <h2 style="margin-top: 1em;">Explore Our Campuses</h2>
+			
+			<div class="horizontal-container first-container">
+			  <img src="campus1.png" alt="Image of Main Campus" height="100%" width="auto">
+			  <div class="information-container">
+				<div>
+			      <h3 style="color: #1E1B18;">Main Campus</h3>
+			      <p class="important text-info">200 University Ave. West, Waterloo, Ontario</p>
+				  <p>Home to most of the University of Waterloo’s programs and facilities.</p>
+				</div>
+				<p class="details">Details &gt;</p>
+			  </div>
+			</div>
+			
+			<div class="horizontal-container hor-con-2">
+			  <div class="information-container info-con-2">
+				<div>
+			      <h3 style="color: #1E1B18;">Stratford School of Interaction Design and Business</h3>
+			      <p class="important text-info">125 St. Patrick Street, Stratford, Ontario</p>
+				  <p>Offers our Global Business and Digital Arts program.</p>
+				</div>
+				<p class="details">Details &gt;</p>
+			  </div>
+			  <img src="campus2.png" alt="Image of Stratford School" height="100%" width="auto">
+			</div>
+			
+			<div class="horizontal-container">
+			  <img src="campus4.png" alt="Image of School of Architecture" height="100%" width="auto">
+			  <div class="information-container">
+				<div>
+			      <h3 style="color: #1E1B18;">School of Architecture</h3>
+			      <p class="important text-info">7 Melville Street South, Cambridge, Ontario</p>
+				  <p>Our pre-professional Academic Program is fully dedicated to imparting to students the culture and practice of design.</p>
+				</div>
+				<p class="details">Details &gt;</p>
+			  </div>
+			</div>
+			
+			<div class="horizontal-container hor-con-2">
+			  <div class="information-container info-con-2">
+				<div>
+			      <h3 style="color: #1E1B18;">Health Sciences Campus</h3>
+			      <p class="important text-info">10 Victoria Street South, Kitchener, Ontario</p>
+				  <p>Includes both the School of Pharmacy and the McMaster/Waterloo DeGroote School of Medicine.</p>
+				</div>
+				<p class="details">Details &gt;</p>
+			  </div>
+			  <img src="campus3.png" alt="Image of Health Sciences Campus" height="100%" width="auto">
+			</div>
+			
+			<a href="https://uwaterloo.ca/future-students/visit-waterloo/location-directions"><button class="button-cta"><h3 class="button-text">Explore All</h3></button></a>
+		  </div>
+		</div>
+	  </section>
+	
+	  <footer>
+	    <div class="section-contents">
+		  <div class="flexible-container footer-container">
+		    <table>
+			  <tr>
+			    <th>Main Campus</th>
+				<th>Connect</th>
+				<th>Policies</th>
+				<th>Support</th>
+			  <tr>
+			    <td>200 University Avenue West,<br>Waterloo, ON, Canada N2L 3G1<br>+ 1 519 888 4557</td>
+			    <td>Contact<br>Maps & Directions<br>Emergency Notifications</td>
+				<td>Accessibility<br>Privacy<br>Copyright</td>
+				<td>Careers<br>Feedback<br>FAQ</td>
+			  </tr>
+			  <tr>
+			    <th><br>Land Acknowledgement</th>
+			  </tr>
+			  <tr>
+			    <td colspan="3">The University of Waterloo acknowledges that much of our work takes place 
+				on the traditional territory of the Neutral, Anishinaabeg, and Haudenosaunee peoples. Our
+				main campus is situated on the Haldimand Tract, the land granted to the Six Nations that
+				includes six miles on each side of the Grand River. Our active work toward reconciliation
+				takes place across our campuses through research, learning, teaching, and community 
+				building, and is co-ordinated within the Office of Indigenous Relations.</td>
+			  </tr>
+			  <tr>
+			    <th><br>Connect With Us</th>
+			  </tr>
+			  <tr>
+			   <td><img src="social-logos.png" alt="Social Logos" width="auto" height="30em"><a href="https://uwaterloo.ca/social-media">@ uwaterloo social directory</a><a href="mailto:a3mckague@uwaterloo.ca">© 2024 code by Andreea</a></td>
+			 </tr>
+			</table>
+		  </div>
+		</div>
+	  </footer>
+	</body>
+</html>

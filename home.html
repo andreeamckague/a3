@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+  <html lang="eng-ca">
+    <head>
+      <meta charset="utc-8">
+      <title>Home | University of Waterloo</title>
+	  <!-- created by Andreea McKague on Wednesday, November 27th, 2024-->
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="icon" type="image/x-icon" href="uw-favicon.ico">
+	  <link rel="stylesheet" type="text/css" href="uwstyle.css">
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	  <style>
+		.section-background{
+		  top: 0;
+		  left: 0;
+		  margin: 0;
+		  padding: 0;
+		  background-size: 100%;
+		  background-repeat: no-repeat;
+		  width: 100vw;
+		  height: 100vh;
+		  position: relative;
+		}
+		#hero-background{
+		  background-image: url("home-stock-image.png");
+		}
+		h1{
+		  margin: 0;
+		  padding: 0;
+		  font-family: "Raleway", sans-serif;
+		  font-size: 6.7em;
+		  font-weight: 700;
+		  color: #1E1B18;
+		  line-height: 0;
+		}
+		#innovation{
+          position: absolute;
+		  top: 4.4em;
+		  margin-left: 1.555em;
+		}
+		#innovation-highlight{
+          position: absolute;
+		  top: 27.5em;
+		  margin-left: 6.8em;
+		}
+		#starts-here{
+		  position: absolute;
+		  top: 5.4em;
+          margin-left: 0.365em;
+		}
+		#starts-here-highlight{
+		  position: absolute;
+		  top: 34.3em;
+		}
+		.small-section{
+		  margin: 0;
+		  padding: 0;
+		  width: 100%;
+		  height: 67vh;
+		  overflow: hidden;
+		}
+		.header-col{
+          max-width: 40%;
+		}
+		.text-col{
+          max-width: 55%;
+		}
+		h2{
+		  margin: 0;
+		  padding: 0;
+		  font-family: "Raleway", sans-serif;
+		  font-size: 3.5em;
+		  font-weight: 800;
+		  color: #F4F2EC;
+		  letter-spacing: -0.03em;
+		}
+		h3{
+		  margin: 0;
+		  padding: 0;
+		  font-family: "Raleway", sans-serif;
+		  font-size: 1.8em;
+		  font-weight: 800;
+		  color: #F4F2EC;
+		  line-height: 1.05em;
+		  letter-spacing: -0.02em;
+		}
+		p, td, th{
+		  margin: 0;
+		  padding: 0;
+		  font-family: "Raleway", sans-serif;
+		  font-size: 1.2em;
+		  font-weight: 700;
+		  letter-spacing: 0.01em;
+		  line-height: 1.5em;
+		  color: #F4F2EC;
+		}
+		th{
+		  font-weight: 400;
+		  text-align: left;
+		}
+		#introduction-container{
+          padding-top: 20vh;
+		  display: flex;
+		  justify-content: space-between;
+		}
+		.news-container{
+		  display: flex;
+		  width: 100%;
+		  height: 145vh;
+		  flex-direction: column;
+		  justify-content: center;
+		  align-items: center;
+		  overflow: hidden;
+		 
+		}
+		.news-large{
+		  width: 20em;
+		  height: 38.2em;
+		  border-radius: 1em;
+		  background-color: #F4F2EC;
+          margin: 1em;
+		  padding: 1.2em 2em;
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: flex-start;
+		  align-items: flex-start;
+		  overflow: hidden; 
+		}
+		.news-small{
+		  width: 15em;
+		  height: 35.2em;
+		  padding: 1.2em 2em;
+		  border-radius: 1em;
+		  background-color: #F4F2EC;
+		  overflow: hidden;
+		}		
+		.news-row{
+		  display: flex;
+		  flex-direction: row;
+		  align-items: center;
+		  justify-content: center;
+		  margin-top: 1.6em;
+		}
+		button{
+		  border: none;
+		}
+		.button-cta{
+		  margin-top: 2.2em;
+		  background-color: #FFD74F;
+		  border-radius: 6em;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  transition: all 0.3s ease;
+		}
+		.button-cta:hover{
+		  border: 0.4em solid #FFD74F;
+		  background-color: #1E1B18;
+		}
+		.button-text{
+		  color: #1E1B18;
+		  padding: 0.7em 1.5em;
+		}
+		.button-text:hover{
+		  color: #FFD74F;
+		  padding: 0.7em 1.5em;
+		}
+		.button2-cta{
+		  margin-top: 2.2em;
+		  background-color: #1E1B18;
+		  border-radius: 6em;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  transition: all 0.3s ease;
+		}
+		.button2-cta:hover{
+		  border: 0.4em solid #1E1B18;
+		  background-color: #FFD74F;
+		}
+		.button2-text{
+		  color: #FFD74F;
+		  padding: 0.7em 1.5em;
+		}
+		.button2-text:hover{
+		  color: #1E1B18;
+		  padding: 0.7em 1.5em;
+		}
+		.gradient-container{
+		  background-image: linear-gradient(to right, #F2EDA8, #EAAB00);
+		}
+		.numbers-title{
+		  margin-top: 0.8em;
+		  color: #1E1B18;
+		}
+		.column-items{
+		  display: flex;
+		  align-items: center;
+		  flex-direction: column;		  
+		}
+		.numbers-row{
+	      width: 100%;
+		  display: flex;
+		  flex-direction: row;
+		  align-items: center;
+		  justify-content: space-between;
+		  margin-top: 5em;
+		  margin-bottom: 2em;
+		  text-align: center;
+		}
+		.emphasize{
+	      margin: 0;
+		  padding: 0;
+		  font-family: "Archivo", sans-serif;
+		  font-size: 5em;
+		  font-weight: 700;
+		  color: #1E1B18;
+		  line-height: 0;
+		  margin-bottom: 0.52em;
+		}
+		.number-container{
+		  display: flex;
+		  flex-direction: column;
+		  width: 30%;
+		}
+		.flexible-container{
+		  width: 100%;
+		  height: 100%;
+		  display: flex;
+		  flex-direction: column;
+		  padding: 3em 0em;
+		  align-items: center;
+		  justify-content: center;
+		  overflow: hidden;
+		}
+		.horizontal-container{
+		  display: flex;
+		  width: 95%;
+		  height: 45vh;
+		  background-color: #F4F2EC;
+		  justify-content: space-between;
+		  align-items: center;
+		  border-radius: 1em;
+		  padding: 1em 2em;
+		  overflow: hidden;
+		  margin-top: 1.5em;
+		}
+		.first-container{
+		  margin-top: 3.2em;
+		}
+		.details{
+		  color: black;
+		  margin-top: 2em;
+		}
+		.information-container{
+		  height: 100%;
+		  display: flex;
+		  flex-direction: column; 
+		  justify-content: space-evenly;
+		  align-items: flex-start;
+		  margin-left: 2em;
+		  max-width: 25em;
+		}
+		.date{
+		  font-size: 11vh;
+		  margin-top: 0.45em;
+		  transform: rotate(90deg)
+		}
+		.contact-container{
+          margin-top: 3em;
+		}
+		.contact-text-container{
+		  width: 100%;
+		  display: flex;
+		  justify-content: space-between;
+		  margin-top: 1.2em;
+		  margin-bottom: 2em;
+		}
+		.contact-text{
+		  color: #1E1B18;
+		}
+		.pair{
+		  display: flex;
+		}
+		.pair .contact-text{
+		  padding-left: 4.5em;
+		}
+		td{
+		  padding: 1em 0em;
+		}
+		.footer-container{
+		  margin-top: 2em;
+		}
+      </style>
+    </head>
+    <body>
+	
+      <nav>
+		<div class="section-contents">
+		  <a href="home.html" id="nav-logo"><img src="uw-logo.png" alt="University of Waterloo Logo" width="150em" height="auto"></a>
+          <ul>        
+		    <li><a href="admissions.html">Admissions</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="https://uwaterloo.ca/faculties-academics" target="_blank">Academics</a></li>
+			<li><a href="https://uwaterloo.ca/alumni/" target="_blank">Alumni</a></li>
+			<li><a href="give.html">Give</a></li>
+			 <li><a href="https://uwaterloo.ca/search/" target="_blank"><img src="search-icon.png" alt="Search Icon" width="auto" height="15em"></a></li>
+		  </ul>
+		</div>
+      </nav>
+	  
+	  <section id="hero">
+	    <div class="section-background" id="hero-background"></div>
+		<div class="section-contents">
+		  <img src="innovation-highlight.png" alt="Yellow Highlight" width="650em" height="auto" id="innovation-highlight">
+		  <img src="starts-here-highlight.png" alt="Yellow Highlight" width="650em" height="auto" id="starts-here-highlight">
+		  <h1 id="innovation">Innovation</h1>
+		  <h1 id="starts-here">starts here.</h1>
+	    </div>
+	  </section>
+	  
+	  <section id="intro">
+	    <div class="small-section">
+		  <div class="section-contents" id="introduction-container">
+		  
+		    <img src="line1.png" alt="Image of gradient line" class="line-img" height="225em" width="auto" style="margin-left: 34em">
+
+            <div class="header-col">
+	          <h3>Welcome to the<br>University of Waterloo</h3>
+		    </div>
+
+		    <div class="text-col">
+		      <p>Our focus on strategic integration of teaching and academic excellence, experiential education, 
+			  entrepreneurial spirit and impact-driven research makes the University of Waterloo one of the most
+			  relevant, connected and innovative institutions in the world.<br><br>As a robust entrepreneurial engine 
+			  and home to the world’s leading cooperative education program, Waterloo is a beacon for creators,
+			  explorers and boundary-pushing thinkers.</p>
+	        </div>
+
+		  </div>
+		</div>
+	  </section>
+	
+	  <section id="news">
+	    <div class="section-contents">
+          <div class="news-container">
+		    <h2>Latest Waterloo News</h2>
+			
+			<div class="news-row">
+			  <div class="news-small">
+				<img src="news-small-stock-1.png" alt="Person Writing Math Equations" width="100%" height="auto">
+				<h3 style="color: #1E1B18; padding-top: 0.8em;">Cybersecurity & Privacy Institute secures $1.5M in funding</h3>
+				<p class="important text-info">November 1, 2024</p>
+				<p style="color: #1E1B18;">Waterloo's Cybersecurity and Privacy Institute awarded funding for four projects.</p>
+			  </div>
+			  
+              <div class="news-large">
+				<img src="news-large-stock.png" alt="Scientist in Working in a Lab" width="100%" height="auto">
+				<h3 style="color: #1E1B18; padding-top: 0.8em;">Power list includes UWaterloo women in STEM</h3>
+				<p class="important text-info">October 30, 2024</p>
+				<p style="color: #1E1B18;">Women’s Executive Network annual Top 100 list honours pharmacy
+				director and two alumni for impact.</p>
+			  </div>
+			  
+			  <div class="news-small">
+			    <img src="news-small-stock-2.png" alt="Waterloo Students & Staff Digging" width="100%" height="auto">
+				<h3 style="color: #1E1B18; padding-top: 0.8em;">Faculty of Mathematics breaks ground</h3>
+				<p class="important text-info">October 29, 2024</p>
+				<p style="color: #1E1B18;">Five-story, 120,000-square-foot building will connect mathematical 
+				disciplines and advance green computing.</p>
+			  </div>
+			</div>
+		
+			<button class="button-cta"><h3 class="button-text">View Me</h3></button>
+		  </div>
+		</div>
+	  </section>
+	 
+	  <section id="by-the-numbers">
+	    <div class="small-section gradient-container">
+		  <div class="section-contents column-items">
+			<h2 class="numbers-title">Waterloo by the Numbers</h2>
+			
+			<div class="numbers-row">
+			  <div class="number-container">
+			    <p class="emphasize">#1</p>
+				<p style="color: #1E1B18;">Most Innovative<br>University in Canada</p>
+			  </div>
+			  <div class="number-container">
+			    <p class="emphasize">#1</p>
+				<p style="color: #1E1B18;">School for Entrepreneurs<br>and Start Ups in Canada</p>
+			  </div>
+			  <div class="number-container">
+			    <p class="emphasize">#1</p>
+				<p style="color: #1E1B18;">Comprehensive Research<br>University in Canada</p>
+			  </div>
+			</div>
+			
+			<button class="button2-cta"><h3 class="button2-text">See More</h3></button>
+			
+		  </div>
+		</div>
+	  </section>
+    
+	  <section id="events">
+	    <div class="section-contents">
+		  <div class="flexible-container">
+		  
+		    <h2>Upcoming Events</h2>
+			
+			<div class="horizontal-container first-container">
+			  <img src="event1.png" alt="First Nations Event Image" height="100%" width="auto">
+			  <div class="information-container">
+				<div>
+			      <h3 style="color: black;">Treaties as Foundations: The Legacy of the Mississauga's of the Credit First Nation</h3>
+			      <p class="important text-info">1:00 pm - 2:30 pm EST</p>
+				</div>
+				<p class="details">Details &gt;</p>
+			  </div>
+			  <p class="emphasize date">NOV 9</P>
+			</div>
+			
+			<div class="horizontal-container">
+			  <img src="event2.png" alt="Poppy Event Image" height="100%" width="auto">
+			  <div class="information-container">
+				<div>
+			      <h3 style="color: black;">National Indigenous Veterans Day: Ceremony & Fireside Chat</h3>
+			      <p class="important text-info">2:00 pm - 3:30 pm EST</p>
+				</div>
+				<p class="details">Details &gt;</p>
+			  </div>
+			  <p class="emphasize date">NOV 8</P>
+			</div>
+			
+			<div class="horizontal-container">
+			  <img src="event3.png" alt="Students in Auditorium Event Image" height="100%" width="auto">
+			  <div class="information-container">
+				<div>
+			      <h3 style="color: black;">Velocity Presents : Startup 101 - Funding a startup for the long haul</h3>
+			      <p class="important text-info">5:00 pm - 8:30 pm EST</p>
+				</div>
+				<p class="details">Details &gt;</p>
+			  </div>
+			  <p class="emphasize date" style="font-size: 9.5vh;">NOV 11</P>
+			</div>
+			<button class="button-cta"><h3 class="button-text">View All</h3></button>
+		  </div>
+		</div>
+	  </section>
+	
+	  <section id="contact">
+	    <div class="small-section gradient-container">
+		  <div class="section-contents column-items">
+		  
+		    <div class="contact-container">
+		      <img src="uw-logo-big.png" alt="UWaterloo Logo" width="auto" height="100em">
+		    </div>
+			
+			<div class="contact-text-container">
+			  <p class="contact-text">Office of Advancement - EC1 <br>519-888-4567, ext. 32036 <br>Fax: 519-746-8932 <br>Charity/BN Registration # 119260685 RR0001</p>
+			  <div class="pair">
+			    <p class="contact-text">Privacy Policy<br>Audited Financial<br>Statements</p>
+			    <p class="contact-text">Our Alumni<br>Donor Bill of Rights<br>Gift Acceptance Policy</p>
+	          </div>
+			</div>
+			
+			<button class="button2-cta"><h3 class="button2-text">Give Today</h3></button>
+			
+		  </div>
+		</div>
+	  </section>
+	
+	  <footer>
+	    <div class="section-contents">
+		  <div class="flexible-container footer-container">
+		    <table>
+			  <tr>
+			    <th>Main Campus</th>
+				<th>Connect</th>
+				<th>Policies</th>
+				<th>Support</th>
+			  <tr>
+			    <td>200 University Avenue West,<br>Waterloo, ON, Canada N2L 3G1<br>+ 1 519 888 4557</td>
+			    <td>Contact<br>Maps & Directions<br>Emergency Notifications</td>
+				<td>Accessibility<br>Privacy<br>Copyright</td>
+				<td>Careers<br>Feedback<br>FAQ</td>
+			  </tr>
+			  <tr>
+			    <th><br>Land Acknowledgement</th>
+			  </tr>
+			  <tr>
+			    <td colspan="3">The University of Waterloo acknowledges that much of our work takes place 
+				on the traditional territory of the Neutral, Anishinaabeg, and Haudenosaunee peoples. Our
+				main campus is situated on the Haldimand Tract, the land granted to the Six Nations that
+				includes six miles on each side of the Grand River. Our active work toward reconciliation
+				takes place across our campuses through research, learning, teaching, and community 
+				building, and is co-ordinated within the Office of Indigenous Relations.</td>
+			  </tr>
+			  <tr>
+			    <th><br>Connect With Us</th>
+			  </tr>
+			  <tr>
+			   <td><img src="social-logos.png" alt="Social Logos" width="auto" height="30em"><a href="https://uwaterloo.ca/social-media">@ uwaterloo social directory</a><a href="mailto:a3mckague@uwaterloo.ca">© 2024 code by Andreea</a></td>
+			 </tr>
+			</table>
+		  </div>
+		</div>
+	  </footer>
+	</body>
+</html>
